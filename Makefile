@@ -81,7 +81,7 @@ SRC_MAIN := main.cpp
 ##### FLAGS
 #####
 
-OPTI := -O3
+OPTI := -g
 FLAGS := -std=c++17  $(OPTI) -pthread
 FLAGS += -Wall -Wextra -Wno-pmf-conversions -Wshadow -Wpedantic -Wduplicated-cond -Wduplicated-branches -Wlogical-op 
 FLAGS += -Wnull-dereference -Wuseless-cast -Wold-style-cast -Wcast-align -Wcast-qual -Wno-missing-field-initializers 
@@ -91,7 +91,7 @@ STATIC_LINK_FLAG := rcs
 
 # Include path
 # Must be use with -I
-INC_FLAG := -I $(INC_FOLDER)
+INC_FLAG := -I $(INC_FOLDER) -I ./PerlinNoise
 
 #####
 ##### LIBRARY
